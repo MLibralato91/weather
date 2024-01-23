@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 
-const apiKey = '3e3e2493caf89d46b38ea47b66f38caf'
+const apiKey = ''
 
 const cities = [
   {
