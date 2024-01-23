@@ -25,6 +25,8 @@ const cities = [
 ]
 
 let slide = document.querySelectorAll('.slide');
+let circle = document.getElementsByClassName('fa-regular fa-circle')
+console.log(circle);
 var current = 0;
 var cityName = 'rome';
 
@@ -104,7 +106,9 @@ export function createDayElement(dayName, i, image, dayRange) {
 function clearSlides(){
   for (let i = 0; i < slide.length; i++) {
     slide[i].style.display = 'none'
+    circle[i].classList.remove('active')
   }
+
 }
 
 function nextCity(){
@@ -114,7 +118,9 @@ function nextCity(){
   current++;
   cityName = cities[current].name
   slide[current].style.display = 'block';
-  slide[current].style.opacity = '0.8';
+  slide[current].style.opacity = '0.7';
+  circle[current].classList.add('active');
+
 }
 function prevCity(){
   clearSlides();
@@ -123,13 +129,15 @@ function prevCity(){
 
   cityName = cities[current].name;
   slide[current].style.display = 'block';
-  slide[current].style.opacity = '0.8';
+  slide[current].style.opacity = '0.7';
 }
 
 function start(){
   clearSlides();
   slide[current].style.display ='block';
   slide[current].style.opacity = '0.8';
+  circle[current].classList.add('active');
+
 
 }
 

@@ -14,19 +14,41 @@ $fa-font-path: './webfonts';
   text-align: center;
   color: white;
   font-family: 'Roboto', 'sans-serif';
+  font-weight: 600;
+
 }
 
 .text_uppercase {
   text-transform: uppercase;
 }
 
+.active {
+  background: white;
+  border-radius: 50%;
+}
+
 .widget {
 
   main {
+
+    .pagination {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 200;
+
+      i {
+        font-size: 0.5rem;
+      }
+
+    }
+
     .carousel {
       position: relative;
 
       .arrow {
+        max-width: 800px;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -37,18 +59,22 @@ $fa-font-path: './webfonts';
         i {
           font-size: 30px;
         }
-
-        &:hover {
-          background: rgba(0, 0, 0, .5);
-        }
       }
 
       .l {
         left: 0;
+
+        @media (min-width:768px) {
+          left: 10%
+        }
       }
 
       .r {
         right: 0;
+
+        @media (min-width:768px) {
+          right: 10%
+        }
       }
 
       .slide_1 {
@@ -94,6 +120,7 @@ $fa-font-path: './webfonts';
 
         .temperature {
           font-size: 7rem;
+
         }
 
         .range_temperature {
@@ -104,23 +131,26 @@ $fa-font-path: './webfonts';
       .days {
         width: 100%;
         font-size: 0.7rem;
-        margin-top: 7rem;
+        margin-top: 1.5rem;
+
+        @media (min-width:768px) {
+          font-size: 1.5rem;
+        }
 
         .single_day {
           img {
             width: 3rem;
+
+            @media (min-width:768px) {
+              width: 4rem;
+            }
           }
         }
       }
     }
-
-
   }
 
-
-
 }
-
 
 .days {
   display: flex;
