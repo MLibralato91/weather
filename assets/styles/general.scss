@@ -28,9 +28,7 @@ $fa-font-path: './webfonts';
 }
 
 .widget {
-
   main {
-
     .pagination {
       position: absolute;
       top: 10%;
@@ -41,8 +39,9 @@ $fa-font-path: './webfonts';
       i {
         font-size: 0.5rem;
       }
-
     }
+
+    // Style carousel
 
     .carousel {
       position: relative;
@@ -103,6 +102,8 @@ $fa-font-path: './webfonts';
       }
     }
 
+    //Style Widget 
+
     .main_widget {
       width: 100%;
       position: absolute;
@@ -128,7 +129,11 @@ $fa-font-path: './webfonts';
         }
       }
 
+      // Style single day
+
       .days {
+        display: flex;
+        justify-content: center;
         width: 100%;
         font-size: 0.7rem;
         margin-top: 1.5rem;
@@ -138,6 +143,11 @@ $fa-font-path: './webfonts';
         }
 
         .single_day {
+          @media (min-width:768px) {
+            margin: 0 0.5rem 0 0.5rem;
+
+          }
+
           img {
             width: 3rem;
 
@@ -150,9 +160,4 @@ $fa-font-path: './webfonts';
     }
   }
 
-}
-
-.days {
-  display: flex;
-  justify-content: center;
 }

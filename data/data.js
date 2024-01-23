@@ -26,12 +26,11 @@ const cities = [
 
 let slide = document.querySelectorAll('.slide');
 let circle = document.getElementsByClassName('fa-regular fa-circle')
-console.log(circle);
 var current = 0;
 var cityName = 'rome';
 
 
-
+// Get data and create Element
 export async function getData() {
 
     const cityUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`
@@ -103,6 +102,7 @@ export function createDayElement(dayName, i, image, dayRange) {
   rangeTemperatureDayDiv.textContent = `${Math.floor(dayRange.temp.min)}°/ ${Math.floor(dayRange.temp.max)}°`;
 }
 
+// Carousel and pagination function
 function clearSlides(){
   for (let i = 0; i < slide.length; i++) {
     slide[i].style.display = 'none'
@@ -122,6 +122,7 @@ function nextCity(){
   circle[current].classList.add('active');
 
 }
+
 function prevCity(){
   clearSlides();
   if(current === 0) current = slide.length;
@@ -140,9 +141,10 @@ function start(){
 
 
 }
-
+// Init the the first slide
 start();
 
+// Button for change slide
   const btnRight = document.querySelector('.arrow.r i')
   btnRight.addEventListener('click', function(){
     console.log(cityName);
