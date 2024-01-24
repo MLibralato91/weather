@@ -61,7 +61,7 @@ $fa-font-path: './webfonts';
       }
 
       .l {
-        left: 0;
+        left: 2%;
 
         @media (min-width:768px) {
           left: 10%
@@ -69,7 +69,7 @@ $fa-font-path: './webfonts';
       }
 
       .r {
-        right: 0;
+        right: 2%;
 
         @media (min-width:768px) {
           right: 10%
@@ -136,7 +136,7 @@ $fa-font-path: './webfonts';
         justify-content: center;
         width: 100%;
         font-size: 0.7rem;
-        margin-top: 1.5rem;
+        margin-top: 5rem;
 
         @media (min-width:768px) {
           font-size: 1.5rem;
