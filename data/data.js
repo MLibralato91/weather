@@ -131,6 +131,7 @@ function prevCity(){
   cityName = cities[current].name;
   slide[current].style.display = 'block';
   slide[current].style.opacity = '0.7';
+  circle[current].classList.add('active');
 }
 
 function start(){
